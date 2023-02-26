@@ -21,7 +21,7 @@ export class ListtaskComponent {
     'status',
     'startingDate',
     'dueDate',
-    'projectMember', 
+    'projectManager', 
     'action'
   ]
   
@@ -31,8 +31,9 @@ export class ListtaskComponent {
   constructor(private router:Router,private service:TasksService) { }
 
   
-  displayColumns:string[] = ['ProjectName','TaskName','Status','ProjectMember','Date','DueDate','Action'];
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getTaskDetails();
+  }
 
   getTaskDetails(){
     this.service.getTasks().subscribe({

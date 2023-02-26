@@ -11,11 +11,24 @@
         <mat-card-content class="my-3 dashboard-card-content">
           <div class="content my-2">
             <form [formGroup]="taskForm" (ngSubmit)="addTask()" class="form">
+              
+               <!-- Add Project Name -->
+               <mat-form-field class="mx-4  col-md-4 col-lg-4 col-sm-10 col-xs-10" appearance="outline">
+                <mat-label>Project Name</mat-label>
+                <mat-select formControlName="projectName">
+                  <mat-option *ngFor="let project of projects" [value]="project.projectName">
+                    {{project.projectName}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+
               <!-- Add Task Name -->
               <mat-form-field class="mx-4  col-md-4 col-lg-4 col-sm-10 col-xs-10" appearance="outline">
                 <mat-label>Task Name</mat-label>
-                <input type="text" formControlName="projectName" matInput>
+                <input type="text" formControlName="taskName" matInput>
               </mat-form-field>
+
+             
 
               <!-- Add Task Status -->
               <mat-form-field appearance="outline" class="mx-4  col-md-4 col-lg-4 col-sm-10 col-xs-10">
@@ -55,21 +68,11 @@
                 </mat-select>
               </mat-form-field>
 
-              <!-- Select/Add Team Memeber -->
-              <mat-form-field class="mx-4 col-md-4 col-lg-4 col-sm-10 col-xs-10" appearance="outline">
-                <mat-label>Project Team Members</mat-label>
-                <mat-select formControlName="projectMember">
-                  <mat-option *ngFor="let member of employees" [value]="member.employeeName">
-                    {{member.employeeName}}
-                  </mat-option>
-                </mat-select>
-              </mat-form-field>
-
               <!-- Add Task Description -->
               <div class="col-md-10">
                 <mat-form-field class="mx-4 col-md-10 col-lg-10 col-sm-10 col-xs-10" appearance="outline">
                   <mat-label>Description</mat-label>
-                  <textarea name="" id="" cols="100" rows="10" matInput formControlName="projectDesc"></textarea>
+                  <textarea name="" id="" cols="100" rows="10" matInput formControlName="taskDescription"></textarea>
                 </mat-form-field>
               </div>
               <button class="btn mx-1" mat-raised-button color="primary" type="submit">Save</button>

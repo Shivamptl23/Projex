@@ -49,6 +49,16 @@
       "status": "pending",
       "projectDesc": "Testing 123456",
       "id": 8
+    },
+    {
+      "projectName": "Road Safety Tool",
+      "projectManager": "Smith Stone",
+      "projectMember": "John Doe",
+      "startingDate": "2023-02-19T18:30:00.000Z",
+      "dueDate": "2023-02-27T18:30:00.000Z",
+      "status": "pending",
+      "projectDesc": "Road Safety tool ",
+      "id": 9
     }
   ],
   "users": [
@@ -189,18 +199,34 @@
   ],
   "tasks": [
     {
-      "projectName":"Sample Project 1",
+      "projectName": "Sample Project 1",
       "taskName": "Sample Task 1",
       "status": "pending",
       "startingDate": "2023-02-24T18:30:00.000Z",
       "dueDate": "2023-02-24T18:30:00.000Z",
-      "projectMember": [
-        "John Doe",
-        "Diana Ruth",
-        "Smith Stone"
-      ],
+      "projectManager": "John Doe",
       "description": "Sample Projects s and its tasks",
       "id": 1
+    },
+    {
+      "projectName": "Sample 2",
+      "taskName": "ToDo list",
+      "status": "pending",
+      "startingDate": "2023-02-22T18:30:00.000Z",
+      "dueDate": "2023-02-27T18:30:00.000Z",
+      "projectManager": "Diana Ruths",
+      "taskDescription": "Add ToDo List in the Sample Project",
+      "id": 2
+    },
+    {
+      "projectName": "Call of Duty",
+      "taskName": "Inventory Page",
+      "status": "on-hold",
+      "startingDate": "2023-02-21T18:30:00.000Z",
+      "dueDate": "2023-02-27T18:30:00.000Z",
+      "projectManager": "Smith Stone",
+      "taskDescription": "Create Player Inventory page ",
+      "id": 3
     }
   ]
 }

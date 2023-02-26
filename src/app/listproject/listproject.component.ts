@@ -50,8 +50,6 @@ export class ListprojectComponent implements OnInit{
 
   }
 
-  displayColumns:string[] = ['ProjectID','ProjectName','ProjectMember','Date','DueDate','Action']
-
   getProjectDetails(){
     this._projectSercice.getProject().subscribe({
       next: (res:any) => {
