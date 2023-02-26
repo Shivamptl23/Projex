@@ -1,0 +1,194 @@
+mat-sidenav-container {
+  height: calc(205vh - 105vh);
+}
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+mat-sidenav {
+  width: 200px;
+  /* background-color: #eee; */
+}
+
+mat-expansion-panel mat-expansion-panel-header {
+  padding: 20px;
+  gap: 1rem;
+}
+mat-expansion-panel mat-expansion-panel-header mat-icon {
+  margin-right: 0.5rem;
+}
+
+mat-expansion-panel mat-expansion-panel-header label {
+  padding-right: 10px;
+  font-size: 16px;
+}
+mat-nav-list a.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+mat-nav-list a mat-icon {
+  padding-top: 0px;
+  padding-right: 31px;
+  padding-left: 3px;
+  position: fixed;
+}
+
+mat-nav-list a label {
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 35px;
+}
+
+.dropdown-menu {
+  width: 200px;
+}
+.dropdown .dropdown-menu .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dropdown .dropdown-menu .dropdown-item label {
+  padding: 0.1rem;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btns {
+  display: flex;
+  float: end;
+}
+
+/* Chat Message box */
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  border-radius: 10px 10px 0 0; /*top-left,top-right,bottom-right,bottom-left*/
+  z-index: 9;
+}
+.chat-input {
+  background-color: rgba(211, 211, 211, 0);
+  padding: 10px;
+  display: block;
+  justify-content: space-between;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 10px 0;
+  border: none;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+input:focus {
+  background-color: #ddd;
+  outline: none;
+}
+ul{
+  margin-left: -42px;
+}
+label {
+  padding: 5px;
+}
+.chat-header {
+  display: flex;
+  padding: 15px;
+  color: white;
+  border-radius: 10px 10px 0 0; /*top-left,top-right,bottom-right,bottom-left*/
+  justify-content: space-between;
+  background-color: #3f51b5;
+}
+.chat-header h1 {
+  font-weight: 600;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+.chat-body {
+  overflow-y: scroll;
+  height: 300px;
+  margin: 5px;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+.chat-body ul li{
+  list-style: none;
+  width: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  gap: .4rem;
+}
+.person{
+  font-size: 30px;
+  padding-right: 1.5rem;
+  padding-bottom: .9rem;
+}
+.chat-body ul li label{
+  max-width: fit-content;
+  height: auto;
+  margin-top: 10px;
+  padding: 10px 15px 10px 15px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px 10px 10px 0; /*top-left,top-right,bottom-right,bottom-left*/
+  background-color: #3f51b5;
+  color: white;
+}
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+a {
+  cursor: pointer;
+}
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}

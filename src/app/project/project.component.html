@@ -1,0 +1,83 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Projects</h1>
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile [colspan]="2" [rowspan]="2">
+      <mat-card class="project-card">
+        <mat-card-header>
+          <mat-card-title>
+            Create New Projects
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="my-3 dashboard-card-content">
+          <div class="content my-2">
+            <form [formGroup]="projectForm" (ngSubmit)="addProject()" class="form">
+              <!-- Add Project Name -->
+              <mat-form-field class="mx-4  col-md-4 col-lg-4 col-sm-10 col-xs-10" appearance="outline">
+                <mat-label>Project Name</mat-label>
+                <input type="text" formControlName="projectName" matInput>
+              </mat-form-field>
+
+              <!-- Add Project Status -->
+              <mat-form-field appearance="outline" class="mx-4  col-md-4 col-lg-4 col-sm-10 col-xs-10">
+                <mat-label>Status</mat-label>
+                <mat-select formControlName="status">
+                  <mat-option *ngFor="let stat of status" [value]="stat.value">
+                    {{stat.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <!-- Sart date -->
+              <mat-form-field class="mx-4 col-md-4 col-lg-4 col-sm-10 col-xs-10" appearance="outline">
+                <mat-label>Start Date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="startingDate">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+
+              <!-- Due Date -->
+              <mat-form-field class="mx-4 col-md-4 col-lg-4 col-sm-10 col-xs-10" appearance="outline">
+                <mat-label>Due Date</mat-label>
+                <input matInput [matDatepicker]="picker1" formControlName="dueDate">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+              </mat-form-field>
+
+              <!-- Project Manager -->
+              <mat-form-field class="mx-4 col-md-4 col-lg-4 col-sm-10 col-xs-10" appearance="outline">
+                <mat-label>Project Manager</mat-label>
+                <mat-select formControlName="projectManager">
+                  <mat-option *ngFor="let manag of managers" [value]="manag.managerName">
+                    {{manag.managerName}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <!-- Select/Add Team Memeber -->
+              <mat-form-field class="mx-4 col-md-4 col-lg-4 col-sm-10 col-xs-10" appearance="outline">
+                <mat-label>Project Team Members</mat-label>
+                <mat-select formControlName="projectMember">
+                  <mat-option *ngFor="let member of employees" [value]="member.employeeName">
+                    {{member.employeeName}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+
+              <!-- Add Project Description -->
+              <div class="col-md-10">
+                <mat-form-field class="mx-4 col-md-10 col-lg-10 col-sm-10 col-xs-10" appearance="outline">
+                  <mat-label>Description</mat-label>
+                  <textarea name="" id="" cols="100" rows="10" matInput formControlName="projectDesc"></textarea>
+                </mat-form-field>
+              </div>
+              <button class="btn mx-1" mat-raised-button color="primary" type="submit">Save</button>
+              <button class="btn mx-1" mat-raised-button color="basic">Cancle</button>
+            </form>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

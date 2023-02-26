@@ -1,0 +1,35 @@
+<form class="row" [formGroup]="loginForm" (ngSubmit)="checkLogin()">
+    <div class="col-md-10 mb-4">
+        <label for="validationDefaultUsername" class="form-label">Username</label>
+        <div class="input-group">
+          <span class="input-group-text" id="inputGroupPrepend2">@</span>
+          <input type="text" class="form-control" formControlName="username" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required>
+        </div>
+      </div>
+      <div class="col-md-10 mb-4">
+        <label for="validationDefault03" class="form-label">Password</label>
+        <input type="password" class="form-control" formControlName="password" id="validationDefault03" required>
+      </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Signin</button>
+    </div>
+   <!-- Register buttons -->
+   <div class="text-center">
+    <p>or sign up with:</p>
+    <button type="button" class="btn btn-link btn-floating mx-1">
+      <i class="fab fa-facebook-f"></i>
+    </button>
+
+    <button type="button" class="btn btn-link btn-floating mx-1">
+      <i class="fab fa-google"></i>
+    </button>
+
+    <button type="button" class="btn btn-link btn-floating mx-1">
+      <i class="fab fa-twitter"></i>
+    </button>
+
+    <button type="button" class="btn btn-link btn-floating mx-1">
+      <i class="fab fa-github"></i>
+    </button>
+  </div>
+  </form>

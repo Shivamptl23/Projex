@@ -1,0 +1,46 @@
+.grid-container {
+  margin: 20px;
+}
+
+.more-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.mat-elevation-z8{
+  overflow: auto;
+}
+.list-card-content {
+  text-align: center;
+}
+
+.cards {
+  position: relative;
+  top: 10px;
+  margin: 10px;
+  width: 300px;
+  height: 150px;
+}
+.card-title {
+  padding: 20px;
+}
+.card-content {
+  padding-left: 30px;
+}
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+body.dark-theme {
+  color: #eee;
+  background-color: #252222;
+}
+
+
+.mat-tab-group .mat-tab{
+  position: fixed;
+}
+.cards:hover{
+  cursor: pointer;
+}
+

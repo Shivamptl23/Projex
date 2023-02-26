@@ -1,0 +1,206 @@
+{
+  "project": [
+    {
+      "id": 4,
+      "projectName": "Sample",
+      "projectManager": "John Doe",
+      "projectMember": "Shivam Siyani",
+      "startingDate": "2023-02-24T18:30:00.000Z",
+      "dueDate": "2023-02-24T18:30:00.000Z",
+      "status": "pending",
+      "projectDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum, metus vitae malesuada mollis, urna nisi luctus ligula, vitae volutpat massa eros eu ligula. Nunc dui metus, iaculis id dolor non, luctus tristique libero. Aenean et sagittis sem. Nulla facilisi. Mauris at placerat augue. Nullam porttitor felis turpis, ac varius eros placerat et. Nunc ut enim scelerisque, porta lacus vitae, viverra justo. Nam mollis turpis nec dolor feugiat, sed bibendum velit placerat. Etiam in hendrerit leo. Nullam mollis lorem massa, sit amet tincidunt dolor lacinia at.\n"
+    },
+    {
+      "projectName": "Sample 2",
+      "projectManager": "John Doe",
+      "projectMember": "Diana Ruths",
+      "startingDate": "2023-01-26T18:30:00.000Z",
+      "dueDate": "2023-01-24T18:30:00.000Z",
+      "status": "on-hold",
+      "projectDesc": "THis is project for RED_EYE tool which helps to make Passive attack on victim",
+      "id": 5
+    },
+    {
+      "projectName": "Call of Duty",
+      "projectManager": "Smith Stone",
+      "projectMember": "Diana Ruths",
+      "startingDate": "2023-03-23T18:30:00.000Z",
+      "dueDate": "2023-05-19T18:30:00.000Z",
+      "status": "pending",
+      "projectDesc": "A Call of duty app that can be use to retrieve players details",
+      "id": 6
+    },
+    {
+      "projectName": "Car Rental system",
+      "projectManager": "Smith Stone",
+      "projectMember": "Shivam Siyani",
+      "startingDate": "2023-02-21T18:30:00.000Z",
+      "dueDate": "2023-04-21T18:30:00.000Z",
+      "status": "on-hold",
+      "projectDesc": "This project is for car renting business ",
+      "id": 7
+    },
+    {
+      "projectName": "Car",
+      "projectManager": "John Doe",
+      "projectMember": "Diana Ruths",
+      "startingDate": "2023-02-16T18:30:00.000Z",
+      "dueDate": "2023-02-24T18:30:00.000Z",
+      "status": "pending",
+      "projectDesc": "Testing 123456",
+      "id": 8
+    }
+  ],
+  "users": [
+    {
+      "firstname": "Shivam",
+      "lastname": "Siyani",
+      "email": "shivam2023@google.com",
+      "username": "Shivam23",
+      "password": "shivam12345",
+      "phone": "7984067475",
+      "role": "Employee",
+      "gender": "male",
+      "isActive": true,
+      "id": 1
+    },
+    {
+      "firstname": "Raj",
+      "lastname": "Parsana",
+      "email": "raj2023@google.com",
+      "username": "Rajparsana23",
+      "password": "rajParsana1243",
+      "phone": "7984067777",
+      "role": "Employee",
+      "gender": "male",
+      "isActive": true,
+      "id": 2
+    },
+    {
+      "firstname": "Admin",
+      "lastname": "",
+      "email": "admin@google.com",
+      "username": "Admin",
+      "password": "admin",
+      "phone": "",
+      "role": "admin",
+      "gender": "male",
+      "isActive": true,
+      "id": 3
+    },
+    {
+      "firstname": "Rajvi",
+      "lastname": "Patel",
+      "username": "RajviPtl20",
+      "email": "rajviptl2023@google.com",
+      "password": "rajvi2139",
+      "role": "Employee",
+      "gender": "female",
+      "phone": "8989512124",
+      "isActive": true,
+      "id": 4
+    },
+    {
+      "firstname": "Tanvi",
+      "lastname": "Desai",
+      "username": "TanviD2022",
+      "email": "tanvid@.google.com",
+      "password": "missdesai2020",
+      "role": "Employee",
+      "gender": "female",
+      "phone": "9989534124",
+      "isActive": true,
+      "id": 5
+    },
+    {
+      "firstname": "ntusr",
+      "lastname": "user",
+      "username": "ntuser2021",
+      "email": "ntuser@google.com",
+      "password": "ntuser2021",
+      "role": "Employee",
+      "gender": "male",
+      "phone": "9989534124",
+      "isActive": true,
+      "id": 6
+    },
+    {
+      "firstname": "test",
+      "lastname": "user1",
+      "username": "testuser1",
+      "email": "testuser1@google.com",
+      "password": "testuser1",
+      "role": "Employee",
+      "gender": "female",
+      "phone": "9989534124",
+      "isActive": true,
+      "id": 7
+    },
+    {
+      "firstname": "Shyam",
+      "lastname": "sharma",
+      "username": "shyam2022",
+      "email": "shyammsharma@google.com",
+      "password": "shyamsh1234",
+      "role": "Manager",
+      "gender": "male",
+      "phone": "7987954321",
+      "isActive": true,
+      "id": 8
+    },
+    {
+      "id": 9,
+      "firstname": "tester",
+      "lastname": "user2",
+      "username": "testeruser2",
+      "email": "testeruser2@google.com",
+      "password": "Testeruser2@$#",
+      "role": "Employee",
+      "gender": "female",
+      "phone": "9989534124",
+      "isActive": true
+    },
+    {
+      "id": 10,
+      "firstname": "Darshit ",
+      "lastname": "Makadia",
+      "username": "darshitMD",
+      "email": "darshitm23@google.com",
+      "password": "darshit123",
+      "role": "Manager",
+      "gender": "male",
+      "phone": "9989534124",
+      "isActive": false
+    }
+  ],
+  "roles": [
+    {
+      "code": "manager",
+      "name": "Manager"
+    },
+    {
+      "code": "admin",
+      "name": "Admin"
+    },
+    {
+      "code": "employee",
+      "name": "Employee"
+    }
+  ],
+  "tasks": [
+    {
+      "projectName":"Sample Project 1",
+      "taskName": "Sample Task 1",
+      "status": "pending",
+      "startingDate": "2023-02-24T18:30:00.000Z",
+      "dueDate": "2023-02-24T18:30:00.000Z",
+      "projectMember": [
+        "John Doe",
+        "Diana Ruth",
+        "Smith Stone"
+      ],
+      "description": "Sample Projects s and its tasks",
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+.grid-container {
+    margin: 20px;
+    
+  }
+  .projectview-card .detail{
+    
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    height: auto;
+    border-left-color: #117a8b;
+  }
+
+  mat-card{
+    position: relative;
+    right: 300px;
+    width: 55%;
+    padding: 20px;
+    height: 46vh;
+    border-left:5px solid #117a8b;
+  }
+  @media (max-width:1049px){
+    mat-card{
+      position: relative;
+      right: 0px;
+      width: 80%;
+      padding: 20px;
+      height: 49vh;
+      border-left:5px solid #117a8b;
+      justify-content: space-between;
+      align-items: center;
+    }
+    mat-card mat-card-content{
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .project-card-1 {
+    position: absolute;
+    top: 500px;
+    left: 10px;
+    right: 5px;
+    bottom:5px;
+    height: auto;
+  }
+  .more-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+  
+  .project-card-content {
+    text-align: start;
+  }
+  .example-full-width {
+    width: 100%;
+  }
+  .mat-mdc-card-header {
+    display: flex;
+    padding: 0px 0px 16px 0;
+}
+
+  b.title{
+    border-bottom: 1px solid #007BFF;
+  }
+  b.content{
+    padding-top: 15px;
+    margin-top: 5px;
+  }
+  dd{
+    margin-bottom: 0.9rem;
+    margin-left: 0;
+  }
+  dt{
+    padding: 0 0 5px 0;
+  }

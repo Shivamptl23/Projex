@@ -1,0 +1,48 @@
+<div class="grid-container">
+    <h1 class="mat-h1">View Projects</h1>
+    <mat-grid-list cols="1"  rowHeight="370px">
+        <mat-grid-tile>
+            <mat-card class="projectview-card detail">
+                <mat-card-header>
+                    <mat-card-title>
+                        Project Details
+                        <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+                            <mat-icon>more_vert</mat-icon>
+                        </button>
+                        <mat-menu #menu="matMenu" xPosition="before">
+                            <button mat-menu-item>Expand</button>
+                            <button mat-menu-item>Remove</button>
+                        </mat-menu>
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="project-card-content">
+                    <div class="row d-flex flex-row justify-content-between">
+                        <div class="col-md-8 col-sm-6">
+                            <dl>
+                                <dt><b class="title">Project Name</b></dt>
+                                <dd >{{datas.projectName}}</dd>
+                                <dt><b class="title">Description</b></dt>
+                                <dd >{{datas.projectDesc}}</dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <dl>
+                                <dt><b class="title">Start Date</b></dt>
+                                <dd>{{datas.startingDate | date}}</dd>
+                                <dt><b class="title">Due Date</b></dt>
+                                <dd>{{datas.dueDate | date}}</dd>
+                                <dt><b class="title">Project Manager</b></dt>
+                                <dd><b class="content">{{datas.projectManager}}</b></dd>
+                                <dt><b class="title">Project Member</b></dt>
+                                <dd><b class="content">{{datas.projectMember}}</b></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+
+
+</div>

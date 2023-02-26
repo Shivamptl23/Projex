@@ -1,1 +1,128 @@
-<router-outlet></router-outlet>
+<mat-toolbar color="primary"[hidden]="isVisible">
+  <div class="logo">
+    <button mat-icon-button (click)="opened=!opened">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span><img src="../../assets/images/logo2.ico" routerLink="./home" width="50px" alt=""></span>
+    <span class="title">PROJEX</span>
+  </div>
+  <div class="btns">
+    <button mat-icon-button>
+      <mat-icon>notifications</mat-icon>
+    </button>
+    <button mat-icon-button class="btn-form" (click)="openChatbox()">
+      <mat-icon>chat</mat-icon>
+    </button>
+    <div class="dropdown">
+      <button mat-icon-button class="dropdown" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <mat-icon>person</mat-icon>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li>
+          <a href="" class="dropdown-item">
+            <mat-icon>settings</mat-icon><label for="">Setting</label>
+          </a>
+        </li>
+        <li>
+          <a href="" class="dropdown-item">
+            <mat-icon>person</mat-icon><label for="">Profile</label>
+          </a>
+        </li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li>
+          <a (click)="logout()" class="dropdown-item">
+            <mat-icon>meeting_room</mat-icon><label for="">Logout</label>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav fixedInViewport [(opened)]="opened">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <a class="nav" mat-list-item routerLink="./dashboard">
+        <mat-icon>dashboard</mat-icon><label for="">Dashboard</label>
+      </a>
+      <mat-expansion-panel [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header>
+          <mat-icon>layers</mat-icon><label for="">Project</label>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item routerLink="./project">
+            <span>New Project</span>
+          </a>
+          <a mat-list-item routerLink="./listproject">
+            <span>List</span>
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header>
+          <mat-icon>task</mat-icon><label for="">Tasks</label>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item routerLink="./tasks">
+            <span>New Task</span>
+          </a>
+          <a mat-list-item routerLink="./listtasks">
+            <span>List</span>
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <a mat-list-item class="nav" routerLink="./report">
+        <mat-icon>report</mat-icon><label for="">Report</label>
+      </a>
+      <mat-expansion-panel [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header *ngIf="isadmin">
+          <mat-icon>group</mat-icon><label for="">Users</label>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item routerLink="./users">
+            <span>Add User</span>
+          </a>
+          <a mat-list-item routerLink="./listusers">
+            <span>List</span>
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+
+
+    <router-outlet></router-outlet>
+
+
+    <div class="chat-popup" id="myForm" *ngIf="showChatbox">
+      <div class="chat-header">
+        <h1>Chat</h1>
+        <a (click)="closeChatbox()"><mat-icon>close</mat-icon></a>
+      </div>
+      <form action="/action_page.php" class="form-container">
+        
+        <div class="chat-body">
+          <ul>
+            <li *ngFor="let message of messages">
+              <mat-icon class="person">person</mat-icon>
+             <label for="">{{message}}</label>
+            </li>
+            
+            <li><mat-icon class="person">person</mat-icon> <label for="">Hello</label></li>
+            <li><mat-icon class="person">person</mat-icon> <label for="">Hello</label></li>
+          </ul>
+        </div>
+        
+        <div class="chat-input">
+          <input type="text" [(ngModel)]="newMessage" [ngModelOptions]="{standalone: true}" id="usnm" cols="50" placeholder="Enter message...." class="">
+          <button class="btn" (click)="sendMessage()">Send</button>
+        </div>
+      </form>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

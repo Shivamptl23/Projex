@@ -1,0 +1,107 @@
+<nav class="navbar navbar-expand-lg bg-light navbar-light  fixed-top">
+    <div class="container">
+
+       <div class="logo">
+        <a class="navbar-brand" href="#">
+            <span><img src="../../assets/images/logo2.ico" routerLink="./home" width="50px" alt=""></span>
+            <span class="title">PROJEX</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+       </div>
+       <!-- ul>li*3>span.page$ -->
+       
+
+        <div class="navlist">
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Templates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">For Teams</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Ingreation</a></li>
+                            <li><a class="dropdown-item" href="#">Starter Guide</a></li>
+                            <li><a class="dropdown-item" href="#">Help Center</a></li>
+                            <li><a class="dropdown-item" href="#">Productivity</a></li>
+                            <li><a class="dropdown-item" href="#">Blog</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</nav>
+<!-- NavBar -->
+
+<div class="hero">
+    <div class="row">
+        <div class=" col-md-6 col-sm-6 content">
+            <h1 class="w-auto display-2">Efficient Project Management System</h1>
+            <p class="fs-4 w-auto">Manage your projects with ease with our project management system.</p>
+            <button class="btn btn-light mx-0 text-uppercase" type="button" data-bs-target="#mySignUpModal"
+            data-bs-toggle="modal">Get Started</button>
+            <button class="btn btn-primary mx-2 text-uppercase" type="button" data-bs-target="#mySignInModel"
+                data-bs-toggle="modal">Sign In</button>
+        </div>
+        <div class=" col-md-6 col-sm-6 img ">
+            <img src="../../assets/images/Startup.png" alt="" class="img-fluid">
+            <div class="shad">
+                <div class="shadow1"></div>
+                <div class="shadow2"></div>
+            </div>
+        </div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#FFFFFF" fill-opacity="1"
+            d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,245.3C672,256,768,256,864,224C960,192,1056,128,1152,90.7C1248,53,1344,43,1392,37.3L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+        </path>
+    </svg>
+</div>
+
+<!-- Sign In Modal -->
+<div class="modal fade in" data-bs-backdrop="false" id="mySignInModel" tabindex="-1" aria-labelledby="mySignInModel"
+    aria-hidden="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-1 display-2 py-2" id="mySignInModel">Login</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <app-login></app-login>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sign Up Modal -->
+<div class="modal fade" data-bs-backdrop="false" id="mySignUpModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content ">
+            <div class="modal-header">
+                <h1 class="modal-title fs-1 display-2" id="signupModal">Sign Up</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <app-signup></app-signup>
+            </div>
+        </div>
+    </div>
+</div>
